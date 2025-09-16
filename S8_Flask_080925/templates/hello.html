@@ -1,0 +1,19 @@
+<!doctype html>
+<title>Hello from Flask</title>
+{% if person %}
+  <h1>Hello {{ person }}!</h1>
+{% else %}
+  <h1>Hello, World!</h1>
+{% endif %}
+{% if mensaje %}
+  <h1>{{mensaje}}!</h1>
+{%endif%}
+<img src="{{url_for('static',filename='logodana.jpeg')}}" width="200px" height="200px"/>
+
+<form action="{{url_for('procesarregistrousuario')}}" method="post" enctype="multipart/form-data">
+
+  <p><input type=text name=email>
+    <p><input type=text name=password>
+      <p><input type=file name=file>
+      <p><input type=submit value=Registrar>
+    </form>
